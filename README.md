@@ -1,6 +1,10 @@
-# kimberlite
+<p align="center">
+  <h1>Kimberline</h1>
+</p>
 
-TODO: Write a description here
+<p align="center">
+  Kimberline is a key value store accessible by the KMB/TCP protocol 
+</p>
 
 ## Installation
 
