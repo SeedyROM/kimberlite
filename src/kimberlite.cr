@@ -71,7 +71,7 @@ module Kimberlite
             raise "Invalid command #{command[0]}"
           end
         end
-      # Bubble up exceptionts and return an ERR response.
+      # Bubble up exceptions and return an ERR response
       rescue exception
         client << "ERR \"#{exception}\"\n"
       end
