@@ -24,6 +24,7 @@ module Kimberlite
   # Start the TCP server
   def start_server
     @@logger.info("Started server at kmb://localhost:7675")
+    # Accpet incoming connections and spawn off client workers
     while client = @@server.accept?
       spawn handle_client client
     end

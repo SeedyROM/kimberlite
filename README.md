@@ -30,4 +30,4 @@ TODO: Write development instructions here
 
 | [![Zack Kollar](https://github.com/seedyrom.png?size=100)](https://github.com/seedyrom) |
 | --- |
-[Zack Kollar](http://seedyrom.io/)
+| [Zack Kollar](http://seedyrom.io/) |
