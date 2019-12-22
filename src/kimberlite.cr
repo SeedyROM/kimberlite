@@ -20,10 +20,8 @@ module Kimberlite
   # Start the TCP server
   def start_server
     @@logger.info("Started server at kmb://localhost:7675")
-    loop do
-      @@server.accept do |client|
-        handle_client client
-      end
+    while client = @@server.accept?
+      spawn handle_client client
     end
   end
 
@@ -62,8 +60,9 @@ module Kimberlite
               raise "Cannot find key \"#{@@store[command[1]]}\""
             end
           elsif command[0] == "QUIT" && command.size == 1 # QUIT
-            @@logger.info "Properly closing connection with #{client.remote_address}"
+            @@logger.info "Client closed connection with #{client.remote_address}"
             client.close
+            break
           else # Handle invalid commands
             raise "Invalid command #{command[0]}"
           end
@@ -71,6 +70,12 @@ module Kimberlite
       # Bubble up exceptionts and return an ERR response.
       rescue exception
         client << "ERR \"#{exception}\"\n"
+      end
+
+      # End connection if the state changed during a command
+      if client.closed?
+        @@logger.info("Connection unexpectedly closed from #{client.remote_address}") if client.closed?
+        break
       end
     end
   end
