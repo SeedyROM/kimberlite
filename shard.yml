@@ -1,0 +1,13 @@
+name: kimberlite
+version: 0.1.0
+
+authors:
+  - Zack Kollar <rallokkcaz@gmail.com>
+
+targets:
+  kimberlite:
+    main: src/kimberlite.cr
+
+crystal: 0.32.0
+
+license: MIT
