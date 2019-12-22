@@ -20,12 +20,14 @@ TODO: Write development instructions here
 
 ## Contributing
 
-1. Fork it (<https://github.com/your-github-user/kimberlite/fork>)
-2. Create your feature branch (`git checkout -b my-new-feature`)
+1. Fork it (<https://github.com/SeedyROM/kimberlite/fork>)
+2. Create your feature branch (`git checkout -b feature/my-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+4. Push to the branch (`git push origin feature/my-feature`)
+5. Create a new PR on github to `develop`, erroneous PRs to master will be ignored
 
-## Contributors
+## Team
 
-- [Zack Kollar](https://github.com/your-github-user) - creator and maintainer
+| [![Zack Kollar](https://github.com/seedyrom.png?size=100)](https://github.com/seedyrom) |
+| --- |
+[Zack Kollar](http://seedyrom.io/)
