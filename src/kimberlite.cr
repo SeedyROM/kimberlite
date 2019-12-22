@@ -3,8 +3,12 @@ require "socket"
 
 module Kimberlite
   extend self
+
+  # Package version
   VERSION = "0.1.0"
 
+  # Data types stored
+  # TODO: Currently only stores Strings
   alias Value = String | Int64 | Float64
 
   # Configure the state of the store
